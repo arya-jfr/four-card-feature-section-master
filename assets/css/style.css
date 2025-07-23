@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* borders */
+    --Red: hsl(0, 78%, 62%);
+    --Cyan: hsl(180, 62%, 55%);
+    --Orange: hsl(34, 97%, 64%);
+    --Blue: hsl(212, 86%, 64%);
+
+    /* bg & txt */
+    --Grey-500: hsl(234, 12%, 34%);
+    --Grey-400: hsl(212, 6%, 44%);
+    --White: hsl(0, 0%, 100%);
+}
+
+@font-face {
+    font-family: Poppins-bold;
+    src: url(../font/Poppins-Bold.ttf);
+}
+
+@font-face {
+    font-family: Poppins-light;
+    src: url(../font/Poppins-Light.ttf);
+}
+
+@font-face {
+    font-family: Poppins-regular;
+    src: url(../font/Poppins-Regular.ttf);
+}
+
+body {
+    background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px;
+    gap: 60px;
+}
+
+.thin {
+    font-family: Poppins-light;
+    color: var(--Grey-400);
+}
+.bold {
+    font-family: Poppins-bold;
+    color: var(--Grey-500);
+}
+p {
+    font-family: Poppins-regular;
+    color: var(--Grey-400);
+}
+
+.letter {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+    width: 450px;
+
+    .thin {
+        font-size: 28px;
+    }
+    .bold {
+        font-size: 28px;
+    }
+    p {
+        font-size: 14px;
+    }
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+    .card {
+        width: 280px;
+        height: 200px;
+        background-color: white;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 5px 20px #ccccccc7;
+        padding: 20px;
+        gap: 5px;
+
+        img {
+            width: 50px;
+            align-self: flex-end;
+            margin-top: 20px;
+        }
+
+        .bold {
+            font-size: 14px;
+        }
+        p {
+            font-size: 12px;
+        }
+    }
+    .second-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+
+.card-border-cyan {
+    border-top: 4px solid cyan;
+}
+
+.card-border-red {
+    border-top: 4px solid red;
+}
+
+.card-border-orange {
+    border-top: 4px solid orange;
+}
+
+.card-border-blue {
+    border-top: 4px solid blue;
+}
+
+@media (max-width: 992px) {
+    .letter {
+        width: 280px;
+        .thin {
+            font-size: 22px;
+        }
+        .bold {
+            font-size: 22px;
+        }
+        p {
+            font-size: 14px;
+        }
+    }
+    .cards {
+        flex-direction: column;
+    }
+}
